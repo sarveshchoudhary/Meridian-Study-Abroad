@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "bundle_id": "agent2-local-20261012",
+  "features": [
+    "tier_score",
+    "gpa_numeric",
+    "gre_numeric",
+    "gre_missing",
+    "applicant_cluster"
+  ],
+  "parameters": {
+    "n_estimators": 300,
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "random_state": 42
+  },
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "shap": "0.54.1",
+    "numba": "0.68.0",
+    "llvmlite": "0.50.0",
+    "cloudpickle": "3.1.2"
+  },
+  "artifacts": {
+    "agent2_admission_model.joblib": "29ba0fe06b607a04577158ad170846fba472c504ad2533575def838e6e91a27a",
+    "agent2_feature_columns.joblib": "9e0ef854b774a6a9bdf9cd58928c2498085a9e84a6a345c1227f0e20814d2b99",
+    "agent2_agent1_tier_features.joblib": "ec575b1fbbe5e8c7c4f716a402a1f0e35245bfc3ca09e3e71fc1e9d9ffe2a409",
+    "agent2_agent1_tier_representation.joblib": "e787d348f06425e1b9a91361d22f1e8f4d1276da6fc9a0eee8b8d28d3942a2ce",
+    "agent2_decision_threshold.joblib": "96dc3fb8e4d3d7c959ca2af7ea1946d048fd248044465355a7f97af36bc1ae0a",
+    "agent2_shap_explainer.joblib": "132785ec7186363271b1b2823133af267b241599a32de49f35bf3b0db0c0b762",
+    "applicant_cluster_model.joblib": "80217e44b854fb71a427724457319f053066cf2f1cab40858ee3d9ff59c70f44",
+    "applicant_cluster_scaler.joblib": "9e43e1ece2915870c367c7d3402ed0034b57d403add487fc56b0d8ef37c086cb",
+    "applicant_cluster_medians.joblib": "bde9a4e28a2f004cb28624b7344848b8d4ce3bf1ed60f21c14ea0a534832f242",
+    "applicant_cluster_features.joblib": "c3a88f6bf3f969a612f9f916b178892d9e0fd04623758ea4cb02de1e10b3faa4",
+    "university_cluster_model.joblib": "f4a85fb8969bba503ff780c80176321eb9d7e143c35a93655e9204413c2d467b",
+    "university_cluster_scaler.joblib": "ed129e214eee3742d676b25bb43d6a58a48b534ef7bb40acb0a16d33525b5654",
+    "university_cluster_medians.joblib": "78183f25d4c02ba6aeeb2a8176138d2fc2992cdf9f7fd5bddf2f469efe28aee2",
+    "university_cluster_features.joblib": "d6eb19bbbf73cbd04e97a87eb9697e23a216b1f111989f7f684e7ed955021dc0"
+  },
+  "source_notebook_sha256": "deb30271e7b637dc1911d6d4e7addee3b025ce1fb6117c43f7450c84664cdb93",
+  "catalog_sha256": "1ec32979843a5d2847c89c9b5ff22424c8ab3b060b3fb57f2f48ab325881c036",
+  "training_data_sha256": "5287e178b8a9d2527bcfb471e7a32a8c5bf1c23b17a3546ea899f34dac80a9af",
+  "evaluation": {
+    "accuracy": 0.8727329580988118,
+    "f1": 0.7988136431043006,
+    "precision": 0.8568398727465536,
+    "recall": 0.7481481481481481,
+    "roc_auc": 0.9338590301822124,
+    "brier": 0.08445398236630776,
+    "threshold": 0.42000000000000004,
+    "confusion_matrix": [
+      [
+        1983,
+        135
+      ],
+      [
+        272,
+        808
+      ]
+    ],
+    "fit_rows": 10232,
+    "validation_rows": 2558,
+    "test_rows": 3198,
+    "scope": "Row-holdout metrics on supplied dataset; not validated real admissions accuracy."
+  },
+  "explanation": "SHAP class-1 probability of the uncalibrated classifier",
+  "limitations": [
+    "Unverified dataset provenance and conflicting repeated applicant identities",
+    "No validated unseen-student/admissions accuracy",
+    "Agent 7 affects matching score only"
+  ]
+}
