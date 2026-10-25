@@ -12,7 +12,7 @@ probability is fabricated when a verified model export is missing.
 
 ## Why Meridian stands out
 
-- **Seven-agent analysis pipeline** covering profile, universities, programs,
+- **Multi-agent analysis pipeline** covering profile, universities, programs,
   finances, scholarships, careers, and extracurricular strength.
 - **End-to-end dossier workflow** from registration and profile completion to
   document preview, analysis, saved results, and PDF reporting.
