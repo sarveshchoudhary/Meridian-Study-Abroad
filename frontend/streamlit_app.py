@@ -15,4 +15,5 @@ st.markdown(
     """
 )
 
+
 st.info("The frontend is configured to call the Flask backend at http://localhost:5000.")
