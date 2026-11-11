@@ -5,7 +5,7 @@ st.markdown(
     """
     ## Study Abroad AI
 
-    This capstone project helps students estimate their likelihood of admission to graduate programs abroad and suggests universities based on profile fit.
+    An AI-powered, multi-agent study abroad counselling platform that transforms student profiles into personalized admission predictions, intelligent university matches, and data-driven academic recommendations.
 
     ### Features
     - MS and MBA prediction flows
